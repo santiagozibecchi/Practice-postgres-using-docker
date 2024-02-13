@@ -13,3 +13,13 @@ create UNIQUE index "unique_country_name" on country (
 create index "country_continent" on country (
 	continent
 );
+
+select * from city;
+
+create UNIQUE INDEX "unique_name_countrycode_district" on city (
+	name, countrycode, district
+);
+
+create INDEX "index_district" on city (
+	district
+);
